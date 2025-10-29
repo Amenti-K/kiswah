@@ -27,7 +27,8 @@ const CertificationResource = ({
   });
 
   const createCert = useMutation({
-    mutationFn: createCertificationResource,
+    mutationFn: (data: CertificationResource) =>
+      createCertificationResource(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["adminResources"] });
       setShowCertForm(false);

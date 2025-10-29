@@ -26,7 +26,7 @@ const EquipmentResource = ({
   });
 
   const createEquipment = useMutation({
-    mutationFn: createEquipmentResource,
+    mutationFn: (data: EquipmentResource) => createEquipmentResource(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["adminResources"] });
       setShowEquipmentForm(false);

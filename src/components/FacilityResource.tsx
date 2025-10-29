@@ -34,7 +34,7 @@ const FacilityResource = ({
   });
 
   const createFacility = useMutation({
-    mutationFn: createFacilityResource,
+    mutationFn: (data: FacilityResource) => createFacilityResource(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["adminResources"] });
       setShowFacilityForm(false);
