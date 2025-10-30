@@ -14,13 +14,13 @@ export const AboutPreview = () => (
           id="about-preview-heading"
           className="text-3xl md:text-4xl font-bold mb-4 text-foreground"
         >
-          Kiswah Solutions
+          Kiswah Trading And Logistics
         </h2>
         <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-          Amenti Solutions specializes in logistics, import/export and trade
-          facilitation across East Africa. We design secure supply chain
-          solutions, manage customs clearance, and connect local producers with
-          global markets using reliable and scalable processes.
+          Kiswah specializes in logistics, import/export and trade facilitation
+          across East Africa. We design secure supply chain solutions, manage
+          customs clearance, and connect local producers with global markets
+          using reliable and scalable processes.
         </p>
 
         <ul className="space-y-2 mb-6 text-sm md:text-base text-foreground/90">

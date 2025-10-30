@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useAppSelector } from "@/store/hooks";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const { data: companyInfo } = useAppSelector((state) => state.companyInfo);
@@ -24,7 +25,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full h-20 bg-[var(--color-bg)]/90 backdrop-blur border-b border-[var(--color-border)] shadow-sm transition-colors">
       <nav className="container mx-auto px-4 md:px-6 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          {companyInfo?.logo && (
+          {/* {companyInfo?.logo && (
             <Image
               src={companyInfo.logo}
               alt={`${companyInfo.name} Logo`}
@@ -32,9 +33,16 @@ const Header = () => {
               height={32}
               className="h-8 w-8 object-contain"
             />
-          )}
+          )} */}
+          <Image
+            src={logo}
+            alt="kiswah Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain"
+          />
           <span className="font-bold text-xl text-foreground">
-            {companyInfo?.name ?? "Kiswah Trading"}
+            {companyInfo?.name ?? "Kiswah Trading and Logitics"}
           </span>
         </Link>
 
@@ -72,8 +80,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden py-4 border-t border-border">
-          <ul className="flex flex-col space-y-4">
+        <div className="md:hidden py-4 h-screen border-t border-border/20 bg-[var(--color-background)]">
+          <ul className="flex flex-col space-y-4 px-8">
             {navigation.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -81,7 +89,7 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
-                      isActive ? "text-primary" : "text-muted-foreground"
+                      isActive ? "text-primary" : "text-foreground"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
