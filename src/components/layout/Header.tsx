@@ -36,13 +36,13 @@ const Header = () => {
           )} */}
           <Image
             src={logo}
-            alt="kiswah Logo"
+            alt="Kiswah Trading and logistics"
             width={32}
             height={32}
             className="h-8 w-8 object-contain"
           />
           <span className="font-bold text-xl text-foreground">
-            {companyInfo?.name ?? "Kiswah Trading and Logitics"}
+            {companyInfo?.name ?? "Kiswah Trading and logistics"}
           </span>
         </Link>
 
