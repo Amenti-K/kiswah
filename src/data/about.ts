@@ -1,5 +1,7 @@
-import ceoImg from "@/assets/full-ceounsplash.jpg";
-import coImg from "@/assets/blueblack-unsplash.jpg";
+import adnanImg from "@/assets/adnan.jpeg";
+import mohamedImg from "@/assets/mohamod.jpeg";
+import mahfuzImg from "@/assets/mahfuz.jpeg";
+import selhadinImg from "@/assets/selhadin.jpg";
 
 export const aboutData = {
   hero: {
@@ -35,22 +37,32 @@ export const aboutData = {
       icon: "Award",
     },
   ],
-  leadership: [
-    {
-      name: "Adnan Mujib",
-      role: "CEO & Co-Founder",
-      image: ceoImg,
-      description:
-        "With over 20 years of experience in international trade and logistics, Adnan leads our strategic vision and operations. His expertise in global markets and deep understanding of Ethiopian business landscape has been instrumental in establishing EthioTrade as a trusted partner for businesses looking to expand internationally.",
-    },
-    {
-      name: "Mahfuz Mujib",
-      role: "Co-Founder",
-      image: coImg,
-      description:
-        "Mahfuz brings extensive experience in supply chain management and customs operations. His innovative approaches to logistics challenges and commitment to operational excellence have shaped our company's reputation for reliability and efficiency. He oversees our day-to-day operations and client relationships.",
-    },
-  ],
+  leadership: {
+    ethiopiaTeam: [
+      {
+        name: "Adnan Mujib",
+        role: "CEO & Co-Founder",
+        image: adnanImg,
+      },
+      {
+        name: "Mohammed Hussein",
+        role: "Co-Founder",
+        image: mohamedImg,
+      },
+    ],
+    chinaTeam: [
+      {
+        name: "Mahfuz Mujib",
+        role: "China Operations Head",
+        image: mahfuzImg,
+      },
+      {
+        name: "Selehadin Seid",
+        role: "Sourcing Manager",
+        image: selhadinImg,
+      },
+    ],
+  },
   whyChooseUs: [
     "Extensive network of global partners",
     "Deep understanding of Ethiopian market",

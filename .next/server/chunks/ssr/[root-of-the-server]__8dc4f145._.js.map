@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Documents/kiswah%20front/kiswah/src/app/%28public%29/automobiles/byd/page.tsx"],"sourcesContent":["export default function BYDPage() {\r\n  return (\r\n    <main className=\"container mx-auto px-6 py-16\">\r\n      <h1 className=\"text-4xl font-bold mb-6\">BYD Electric Vehicles</h1>\r\n      <p className=\"text-muted-foreground mb-10 max-w-2xl\">\r\n        Explore our collection of modern electric vehicles imported directly\r\n        from BYD — China’s leading EV manufacturer.\r\n      </p>\r\n      {/* You can later replace this with a grid of cars */}\r\n      <div className=\"grid md:grid-cols-3 gap-8\">\r\n        <div className=\"border rounded-lg p-4\">BYD Model A</div>\r\n        <div className=\"border rounded-lg p-4\">BYD Model B</div>\r\n        <div className=\"border rounded-lg p-4\">BYD Model C</div>\r\n      </div>\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,6WAAC;QAAK,WAAU;;0BACd,6WAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,6WAAC;gBAAE,WAAU;0BAAwC;;;;;;0BAKrD,6WAAC;gBAAI,WAAU;;kCACb,6WAAC;wBAAI,WAAU;kCAAwB;;;;;;kCACvC,6WAAC;wBAAI,WAAU;kCAAwB;;;;;;kCACvC,6WAAC;wBAAI,WAAU;kCAAwB;;;;;;;;;;;;;;;;;;AAI/C","debugId":null}}]
+}

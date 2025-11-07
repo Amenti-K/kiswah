@@ -4,12 +4,13 @@ import { AboutCompanySection } from "@/components/sections/aboutUs/AboutCompanyS
 import { VisionMissionSection } from "@/components/sections/aboutUs/VisionMissionSection";
 import { AchievementsSection } from "@/components/sections/aboutUs/AchievementsSection";
 import Leadership from "@/components/sections/aboutUs/Leadership";
+import { PhilosophyCultureSection } from "@/components/sections/aboutUs/PhilosophyCultureSection";
 
 const sections = [
   AboutCompanySection,
   VisionMissionSection,
+  PhilosophyCultureSection,
   Leadership,
-  AchievementsSection,
 ];
 
 const About = () => {

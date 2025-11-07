@@ -12,27 +12,27 @@ export const VisionMissionSection = () => {
     {
       title: "Our Mission",
       description:
-        "Deliver reliable import/export and logistics services that connect Ethiopian producers with global markets while ensuring customs compliance, safety, and timely delivery.",
+        "To simplify international trade for our clients by providing secure, transparent, and efficient procurement and logistics solutions — built on strong global partnerships, deep local expertise, and a commitment to protecting every transaction from risk, delay, and uncertainty.",
       icon: "Target",
     },
     {
       title: "Our Vision",
       description:
-        "Be the trusted logistics and trade partner in East Africa — known for efficient cross-border trade, transparent operations and sustainable supply chains.",
+        "To become Ethiopia’s most trusted and innovation-driven sourcing and logistics partner — empowering businesses to trade confidently, access global markets, and grow without barriers.",
       icon: "Lightbulb",
     },
-    {
-      title: "Our Values",
-      description:
-        "Customer focus, integrity in trade compliance, operational excellence, innovation, and long-term partnerships.",
-      icon: "Heart",
-    },
+    // {
+    //   title: "Our Values",
+    //   description:
+    //     "Customer focus, integrity in trade compliance, operational excellence, innovation, and long-term partnerships.",
+    //   icon: "Heart",
+    // },
   ];
 
   return (
     <section className="py-12 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {values.map((value, index) => {
             const Icon = getIcon(value.icon);
             return (

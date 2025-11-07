@@ -22,29 +22,45 @@ export default function ServicesPage() {
   const process = [
     {
       step: "01",
-      title: "Consultation",
-      description: "We understand your needs and develop a customized solution",
+      title: "Requirement Assessment",
+      description:
+        "We begin by understanding your business needs — product type, specifications, budget, delivery timelines, and import conditions. This ensures clarity before any engagement starts.",
     },
     {
       step: "02",
-      title: "Planning",
-      description: "Detailed logistics planning and documentation preparation",
+      title: "Supplier & Product Sourcing",
+      description:
+        "Our team identifies qualified manufacturers and exporters from our global network, verifies product standards, and negotiates competitive pricing on your behalf.",
     },
     {
       step: "03",
-      title: "Execution",
+      title: "Proposal & Approval",
       description:
-        "Professional handling of all trading and logistics operations",
+        "We provide a complete sourcing proposal including cost breakdown, shipping options, delivery schedule, and risk assessment. No action is taken until the client approves.",
     },
     {
       step: "04",
-      title: "Tracking",
-      description: "Real-time monitoring and updates throughout the process",
+      title: "Purchase & Quality Assurance",
+      description:
+        "Once confirmed, we manage procurement, inspect product quality, verify certifications, and ensure packaging meets export and Ethiopian customs requirements.",
     },
     {
       step: "05",
-      title: "Delivery",
-      description: "Safe and timely delivery with complete documentation",
+      title: "Freight & Customs Coordination",
+      description:
+        "We handle sea, air, or land shipping, prepare all documents, and coordinate customs clearance — ensuring full compliance with Ethiopian regulations and minimizing port delays.",
+    },
+    {
+      step: "06",
+      title: "Warehousing & Final Delivery",
+      description:
+        "Upon arrival, we manage storage, inventory handling, or direct delivery to your warehouse, factory, or distribution channel — depending on your supply chain needs.",
+    },
+    {
+      step: "07",
+      title: "Ongoing Support & Partnership Growth",
+      description:
+        "Our work does not end after delivery. We stay engaged to improve your sourcing cycle, negotiate better supplier terms, and plan your future import requirements.",
     },
   ];
   const handleServiceClick = (service: (typeof servicesData)[0]) => {
@@ -58,10 +74,6 @@ export default function ServicesPage() {
         title="Our Services"
         image="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
       />
-      {/* <p className="text-xl text-white/90 leading-relaxed">
-              Comprehensive trading and logistics solutions designed to power
-              your global business growth
-            </p> */}
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -77,12 +89,12 @@ export default function ServicesPage() {
               return (
                 <Card
                   key={service.id}
-                  className="hover-lift animate-fade-in-up border-border cursor-pointer group"
+                  className="hover-lift animate-fade-in-up border-border group p-0"
                   style={{ animationDelay: `${index * 100}ms` }}
                   onClick={() => handleServiceClick(service)}
                 >
-                  <CardContent className="p-8 space-y-4">
-                    <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[hsl(var(--golden))] to-[hsl(var(--golden-dark))] flex items-center justify-center">
+                  <CardContent className="p-4 space-y-2">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(var(--golden))] to-[hsl(var(--golden-dark))] flex items-center justify-center">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
@@ -91,12 +103,12 @@ export default function ServicesPage() {
                     <p className="text-muted-foreground leading-relaxed">
                       {service.shortDescription}
                     </p>
-                    <div className="pt-4">
+                    {/* <div className="pt-4">
                       <div className="flex items-center gap-2 text-[hsl(var(--golden))] font-semibold group-hover:gap-3 transition-all">
                         <span>Learn More</span>
                         <ArrowRight className="w-5 h-5" />
                       </div>
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               );

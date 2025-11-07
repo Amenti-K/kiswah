@@ -35,6 +35,16 @@ const Contact = () => {
 
   const mutation = useMutation({
     mutationFn: sendMessage,
+    onSuccess: () => {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: "",
+      });
+    },
   });
 
   const handleChange = (
@@ -45,7 +55,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple validation: required fields
     if (!formData.firstName || !formData.email || !formData.message) {
       alert("Please fill in all required fields.");
       return;
@@ -63,9 +72,9 @@ const Contact = () => {
           <div>
             <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
             <p className="text-muted-foreground mb-8">
-              We&apos;d love to hear from you! Whether you have a question about
-              our services, pricing, or anything else, our team is ready to
-              answer all your questions.
+              We’d love to hear from you! Whether you have a question about our
+              services, pricing, or anything else, our team is ready to answer
+              all your questions.
             </p>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -193,7 +202,7 @@ const Contact = () => {
                   {mutation.isError && (
                     <div className="flex items-center space-x-2 text-red-500 mt-2">
                       <XCircle className="h-5 w-5" />
-                      <p>Failed to send message. Please try again.</p>
+                      <p>{(mutation.error as Error)?.message}</p>
                     </div>
                   )}
                 </form>

@@ -1,3 +1,4 @@
+import logo from "@/assets/logo.jpg";
 export const companyInfoDefault = {
   name: "Kiswah Trading and Logistics PLC",
   tagline: "Building the Future with Innovation",
@@ -29,26 +30,28 @@ export const companyInfoDefault = {
     },
   ],
   employeeCount: 10,
-  contactEmail: "kiswah.trading@gmail.com",
-  contactPhone: "+251911488821",
-  address: "Tewodros Square, Piassa, Addis Ababa, Ethiopia",
+  contactEmail: "kiswah@kiswahtradingandlogistics.com",
+  contactPhone: "+251910887380",
+  address:
+    ":Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
 
   socialLinks: {
     facebook: "https://www.facebook.com/kiswah.trading",
     telegram: "https://t.me/KiswahTrading",
+    tiktok: "https://t.me/KiswahTrading",
   },
-  logo: null,
+  logo: logo,
 };
 
 export const servicesData = [
   {
-    id: "international-trading",
+    id: "Sourcing-Procurement",
     icon: "Globe",
-    title: "International Trading",
+    title: "Global Sourcing & Procurement",
     shortDescription:
-      "Comprehensive import and export services connecting Ethiopian businesses to global markets.",
+      "We identify, evaluate, and secure high-quality products from verified global suppliers across Asia, the Middle East, Europe, and Africa. From price negotiation to supplier due diligence, we ensure that our clients receive the best value without compromising standards.",
     description:
-      "We handle sourcing, negotiation, and coordination of international trade transactions with expertise and precision. Our team ensures seamless operations from start to finish.",
+      "We identify, evaluate, and secure high-quality products from verified global suppliers across Asia, the Middle East, Europe, and Africa. From price negotiation to supplier due diligence, we ensure that our clients receive the best value without compromising standards.",
     features: [
       "Product sourcing and procurement",
       "Market research and analysis",
@@ -60,13 +63,13 @@ export const servicesData = [
     image: "trading-detail",
   },
   {
-    id: "freight-forwarding",
+    id: "Import-Customs",
     icon: "Ship",
-    title: "Freight Forwarding",
+    title: "Import & Customs Clearance",
     shortDescription:
-      "Expert freight forwarding services by sea, air, and land.",
+      "Kiswah simplifies the entire import process by handling all paperwork, regulatory procedures, and customs formalities on behalf of our clients. We ensure full compliance with Ethiopian laws — minimizing delays, penalties, and clearance risks.",
     description:
-      "We ensure your cargo reaches its destination safely, on time, and cost-effectively through optimized logistics solutions.",
+      "Kiswah simplifies the entire import process by handling all paperwork, regulatory procedures, and customs formalities on behalf of our clients. We ensure full compliance with Ethiopian laws — minimizing delays, penalties, and clearance risks.",
     features: [
       "Sea freight (FCL & LCL)",
       "Air freight services",
@@ -78,12 +81,13 @@ export const servicesData = [
     image: "freight-detail",
   },
   {
-    id: "customs-clearance",
+    id: "Freight-Logistics",
     icon: "FileCheck",
-    title: "Customs Clearance",
-    shortDescription: "Navigate complex customs procedures with ease.",
+    title: "Freight & Logistics Management",
+    shortDescription:
+      "We coordinate international shipping through sea, air, and inland transport, supported by trusted carrier networks. Our logistics planning ensures shipments arrive safely, on time, and with full tracking visibility from origin to destination.",
     description:
-      "Our experts handle all documentation and compliance requirements for smooth clearance at any port or border.",
+      "We coordinate international shipping through sea, air, and inland transport, supported by trusted carrier networks. Our logistics planning ensures shipments arrive safely, on time, and with full tracking visibility from origin to destination.",
     features: [
       "Import/Export documentation",
       "Tariff classification",
@@ -95,13 +99,13 @@ export const servicesData = [
     image: "customs-detail",
   },
   {
-    id: "supply-chain",
+    id: "Warehouse-Distribution",
     icon: "Package",
-    title: "Supply Chain Management",
+    title: "Warehouse & Distribution Solutions",
     shortDescription:
-      "End-to-end supply chain solutions optimized for efficiency.",
+      "From short-term storage to managed distribution, we offer secure warehousing, inventory handling, and last-mile delivery. Our network ensures that goods are stored safely and delivered efficiently to wholesalers, retailers, or production facilities.",
     description:
-      "We streamline your logistics from origin to destination with comprehensive management and real-time visibility.",
+      "From short-term storage to managed distribution, we offer secure warehousing, inventory handling, and last-mile delivery. Our network ensures that goods are stored safely and delivered efficiently to wholesalers, retailers, or production facilities.",
     features: [
       "Inventory management",
       "Warehousing solutions",
@@ -113,13 +117,13 @@ export const servicesData = [
     image: "supply-chain-detail",
   },
   {
-    id: "market-expansion",
+    id: "Advisory-Market",
     icon: "TrendingUp",
-    title: "Market Expansion",
+    title: "Trade Advisory & Market Entry Support",
     shortDescription:
-      "Strategic consulting to help your business enter and grow in new markets.",
+      "For foreign companies entering Ethiopia or local businesses expanding their sourcing markets, Kiswah provides guidance on import regulations, supplier validation, cost structures, and product market fit — reducing risk from day one.",
     description:
-      "We provide market insights, entry strategies, and ongoing support for successful expansion.",
+      "For foreign companies entering Ethiopia or local businesses expanding their sourcing markets, Kiswah provides guidance on import regulations, supplier validation, cost structures, and product market fit — reducing risk from day one.",
     features: [
       "Market research and analysis",
       "Entry strategy development",
@@ -131,13 +135,13 @@ export const servicesData = [
     image: "market-expansion-detail",
   },
   {
-    id: "insurance",
+    id: "Product-Supplier",
     icon: "Shield",
-    title: "Insurance Services",
+    title: "Product & Supplier Verification",
     shortDescription:
-      "Comprehensive cargo insurance to protect your valuable shipments.",
+      "We conduct background checks, quality control evaluations, and factory assessments to protect clients from fraud, counterfeit products, or unreliable vendors — especially in high-risk markets.",
     description:
-      "We offer tailored insurance solutions covering all risks during transit and storage.",
+      "We conduct background checks, quality control evaluations, and factory assessments to protect clients from fraud, counterfeit products, or unreliable vendors — especially in high-risk markets.",
     features: [
       "All-risk cargo insurance",
       "Marine insurance",

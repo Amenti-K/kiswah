@@ -1,11 +1,14 @@
 import { JSX } from "react";
+import Image from "next/image";
 import { Send, Facebook, Twitter, Linkedin, Globe } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 const socialIcons: Record<string, JSX.Element> = {
   facebook: <Facebook size={20} />,
   telegram: <Send size={20} />,
   linkedin: <Linkedin size={20} />,
   twitter: <Twitter size={20} />,
+  tiktok: <FaTiktok size={20} />,
 };
 
 type SocialLinks = Record<string, string>;

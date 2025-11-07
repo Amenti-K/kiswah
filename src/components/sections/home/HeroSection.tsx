@@ -44,7 +44,7 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="relative h-[90vh] overflow-hidden flex flex-col justify-center transition-all duration-1000"
+      className="relative h-[85vh] overflow-hidden flex flex-col justify-center transition-all duration-1000"
       aria-label="Hero section showing company highlights"
     >
       {/* Background Image */}

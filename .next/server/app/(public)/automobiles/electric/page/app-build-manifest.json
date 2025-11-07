@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "/(public)/automobiles/electric/page": [
+      "static/chunks/[root-of-the-server]__62b66e84._.css",
+      "static/chunks/node_modules__pnpm_650f79a2._.js",
+      "static/chunks/src_2d0dff09._.js",
+      "static/chunks/src_app_layout_tsx_1b6b0d83._.js",
+      "static/chunks/4787e_next_dist_client_components_builtin_global-error_305ac744.js",
+      "static/chunks/node_modules__pnpm_5ab95545._.js",
+      "static/chunks/src_4e5271ab._.js",
+      "static/chunks/src_app_(public)_layout_tsx_305ac744._.js",
+      "static/chunks/node_modules__pnpm_91092d90._.js",
+      "static/chunks/src_app_(public)_automobiles_electric_page_tsx_d387e723._.js",
+      "static/chunks/src_app_(public)_automobiles_electric_page_tsx_df732a53._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_bf4925a4._.js",
+      "static/chunks/4787e_next_dist_compiled_react-dom_8ba0017e._.js",
+      "static/chunks/4787e_next_dist_compiled_next-devtools_index_fe030bb1.js",
+      "static/chunks/4787e_next_dist_compiled_25146208._.js",
+      "static/chunks/4787e_next_dist_client_36029ad0._.js",
+      "static/chunks/4787e_next_dist_7efa1f19._.js",
+      "static/chunks/61dca_@swc_helpers_cjs_28edb73c._.js",
+      "static/chunks/_e69f0d32._.js",
+      "static/chunks/_089cbd27._.js"
+    ]
+  }
+}

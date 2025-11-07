@@ -9,31 +9,39 @@ export const AboutCompanySection = () => (
       <h2 className="text-3xl font-bold text-primary mb-4">Kiswah Trading</h2>
       <div className="flex flex-col gap-y-4">
         <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          Kiswah Trading PLC is a leading Ethiopian trading and logistics
-          company specializing in import, export, and distribution of
-          high-quality goods.
+          Kiswah Trading & Logistics is a forward-thinking sourcing and supply
+          chain solutions company based in Ethiopia, dedicated to connecting
+          global markets with local business needs. We specialize in end-to-end
+          import support — from product sourcing and supplier verification to
+          freight coordination, customs handling, warehousing, and final
+          delivery. Our mission is to make international trade simple,
+          transparent, and secure for companies operating in Ethiopia and the
+          wider East African region.
         </p>
         <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          With a strong focus on reliability, customer satisfaction, and global
-          standards, we bridge local markets with international opportunities.
+          Kiswah was founded with a clear vision: to shield our clients’ trade
+          from uncertainty, delays, and inefficiencies through structured
+          processes, ethical operations, and a culture built on accountability
+          and partnership. Whether supporting large industrial imports or
+          fast-moving consumer goods, we stand as a reliable bridge between
+          suppliers and buyers, backed by strong compliance standards and
+          evolving market expertise.
         </p>
         <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          Kiswah Trading PLC is a leading Ethiopian trading and logistics
-          company specializing in import, export, and distribution of
-          high-quality goods.
+          As a new-generation logistics partner, we combine global reach with
+          local market intelligence, helping businesses access quality products,
+          reduce procurement risks, and optimize their supply chain costs. We
+          work with trusted manufacturers and logistics networks across Asia,
+          the Middle East, Europe, and Africa — enabling our partners to focus
+          on growth while we handle the complexity of cross-border trade.
         </p>
         <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          With a strong focus on reliability, customer satisfaction, and global
-          standards, we bridge local markets with international opportunities.
-        </p>
-        <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          Kiswah Trading PLC is a leading Ethiopian trading and logistics
-          company specializing in import, export, and distribution of
-          high-quality goods.
-        </p>
-        <p className="text-base text-[var(--color-muted-foreground)] leading-relaxed">
-          With a strong focus on reliability, customer satisfaction, and global
-          standards, we bridge local markets with international opportunities.
+          In a rapidly expanding Ethiopian economy — where demand for imported
+          goods, raw materials, and industrial inputs continues to grow — Kiswah
+          is positioned not just as a service provider, but as a strategic ally
+          for companies looking to scale with confidence. We are committed to
+          redefining how sourcing and logistics operate in Ethiopia: modern,
+          data-driven, and built on trust.
         </p>
       </div>
     </div>

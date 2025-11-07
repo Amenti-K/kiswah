@@ -1,0 +1,36 @@
+{
+  "pages": {
+    "/(public)/contact/page": [
+      "static/chunks/[root-of-the-server]__62b66e84._.css",
+      "static/chunks/node_modules__pnpm_650f79a2._.js",
+      "static/chunks/src_2d0dff09._.js",
+      "static/chunks/src_app_layout_tsx_1b6b0d83._.js",
+      "static/chunks/4787e_next_dist_client_components_builtin_global-error_305ac744.js",
+      "static/chunks/b2692_react-icons_fa_index_mjs_290cc807._.js",
+      "static/chunks/b2692_react-icons_lib_d4addfaa._.js",
+      "static/chunks/4787e_next_4a97fc88._.js",
+      "static/chunks/89783_lucide-react_dist_esm_4bed4d8a._.js",
+      "static/chunks/src_4e5271ab._.js",
+      "static/chunks/src_app_(public)_layout_tsx_305ac744._.js",
+      "static/chunks/8484d_tailwind-merge_dist_bundle-mjs_mjs_4d8e7d9e._.js",
+      "static/chunks/89783_lucide-react_dist_esm_icons_index_6d2aadc7.js",
+      "static/chunks/89783_lucide-react_dist_esm_icons_index_5c85ec0e.js",
+      "static/chunks/89783_lucide-react_dist_esm_icons_884e8fcb._.js",
+      "static/chunks/89783_lucide-react_dist_esm_lucide-react_68ff9a0f.js",
+      "static/chunks/89783_lucide-react_dist_esm_lucide-react_faa5096b.js",
+      "static/chunks/89783_lucide-react_dist_esm_lucide-react_c232fdf2.js",
+      "static/chunks/node_modules__pnpm_da13417f._.js",
+      "static/chunks/src_4304aadf._.js",
+      "static/chunks/src_app_(public)_contact_page_tsx_f341f82a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_bf4925a4._.js",
+      "static/chunks/4787e_next_dist_compiled_react-dom_8ba0017e._.js",
+      "static/chunks/4787e_next_dist_compiled_next-devtools_index_fe030bb1.js",
+      "static/chunks/4787e_next_dist_compiled_25146208._.js",
+      "static/chunks/4787e_next_dist_client_36029ad0._.js",
+      "static/chunks/4787e_next_dist_7efa1f19._.js",
+      "static/chunks/61dca_@swc_helpers_cjs_28edb73c._.js",
+      "static/chunks/_e69f0d32._.js",
+      "static/chunks/_089cbd27._.js"
+    ]
+  }
+}
