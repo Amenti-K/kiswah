@@ -1,5 +1,25 @@
 (globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
 
+"[project]/src/store/store.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+
+var { k: __turbopack_refresh__, m: module, e: exports } = __turbopack_context__;
+{
+// import { configureStore } from "@reduxjs/toolkit";
+// import authReducer from "./slices/authSlice";
+// import companyInfoReducer from "./slices/companyInfoSlice";
+// const store = configureStore({
+//   reducer: {
+//     auth: authReducer,
+//     companyInfo: companyInfoReducer,
+//   },
+// });
+// export type RootState = ReturnType<typeof store.getState>;
+// export type AppDispatch = typeof store.dispatch;
+// export default store;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/src/store/slices/authSlice.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -59,10 +79,91 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/apis/company-info.api.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/src/lib/api.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
 
-var { k: __turbopack_refresh__, m: module, e: exports } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
+__turbopack_context__.s({
+    "default": ()=>__TURBOPACK__default__export__,
+    "uploadApi": ()=>uploadApi
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/.pnpm/next@15.4.6_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$12$2e$2$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/axios@1.12.2/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/store.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$authSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/slices/authSlice.ts [app-client] (ecmascript)");
+;
+;
+;
+// Base config for all requests
+const BASE_URL = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
+// JSON instance (for public and admin)
+const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$12$2e$2$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: BASE_URL,
+    timeout: 30000,
+    withCredentials: true,
+    headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+    }
+});
+const uploadApi = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$12$2e$2$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: BASE_URL,
+    timeout: 60000,
+    withCredentials: true,
+    headers: {
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json"
+    }
+});
+// Attach token only for admin requests
+const attachAdminInterceptor = (instance)=>{
+    instance.interceptors.request.use({
+        "attachAdminInterceptor.use": (config)=>{
+            // Only attach token for /admin routes
+            if (config.url && config.url.startsWith("/api/admin")) {
+                const token = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].getState().auth.token;
+                if (token) {
+                    config.headers["Authorization"] = "Bearer ".concat(token);
+                }
+            }
+            return config;
+        }
+    }["attachAdminInterceptor.use"], {
+        "attachAdminInterceptor.use": (error)=>Promise.reject(error)
+    }["attachAdminInterceptor.use"]);
+    instance.interceptors.response.use({
+        "attachAdminInterceptor.use": (response)=>response
+    }["attachAdminInterceptor.use"], {
+        "attachAdminInterceptor.use": (error)=>{
+            if (error.response && error.response.status === 401) {
+                __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$authSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["logout"])());
+            }
+            return Promise.reject(error);
+        }
+    }["attachAdminInterceptor.use"]);
+};
+attachAdminInterceptor(api);
+attachAdminInterceptor(uploadApi);
+const __TURBOPACK__default__export__ = api;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/apis/company-info.api.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "getCompanyInfo": ()=>getCompanyInfo
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api.ts [app-client] (ecmascript)");
+;
+const getCompanyInfo = async ()=>{
+    const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/api/public/company-info");
+    return res.data;
+};
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -101,31 +202,6 @@ const companyInfoSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$nod
     }
 });
 const __TURBOPACK__default__export__ = companyInfoSlice.reducer;
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
-}
-}}),
-"[project]/src/store/store.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
-{
-__turbopack_context__.s({
-    "default": ()=>__TURBOPACK__default__export__
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$reduxjs$2b$toolkit$40$2$2e$9$2e$2_reac_a3f880d65c0768a1da33dc0095423c13$2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/@reduxjs+toolkit@2.9.2_reac_a3f880d65c0768a1da33dc0095423c13/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$authSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/slices/authSlice.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$companyInfoSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/slices/companyInfoSlice.ts [app-client] (ecmascript)");
-;
-;
-;
-const store = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$reduxjs$2b$toolkit$40$2$2e$9$2e$2_reac_a3f880d65c0768a1da33dc0095423c13$2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["configureStore"])({
-    reducer: {
-        auth: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$authSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
-        companyInfo: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$slices$2f$companyInfoSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
-    }
-});
-const __TURBOPACK__default__export__ = store;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -255,4 +331,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 }]);
 
-//# sourceMappingURL=src_f1b6ff18._.js.map
+//# sourceMappingURL=src_59d3c30a._.js.map
