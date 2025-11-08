@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import CompanyInfoProviders from "./providers";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-
 import QueryProvider from "./query-provider";
 
 const geistSans = Geist({
@@ -21,30 +20,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://kiswah-two.vercel.app/"
+  ),
   title: {
     default: "Kiswah Trading",
     template: "%s | Kiswah Trading",
   },
   description:
-    "Kiswah Trading and logistics is a leading Ethiopian trading company, providing import-export and general trade services with excellence and integrity.",
+    "Kiswah Trading and Logistics is a leading Ethiopian trading company, providing import-export and general trade services with excellence and integrity.",
   keywords: [
-    "Kiswah Trading and logistics",
+    "Kiswah Trading and Logistics",
     "Trading Company",
     "Logistics Company",
-    "Trading",
-    "Logistics",
     "Import-Export",
-    "Import",
-    "Export",
     "General Trade",
-    "Trading Services",
-    "Logistics Services",
     "Ethiopia",
   ],
   authors: [
     {
       name: "Kiswah Trading and Logistics",
-      url: "https://kiswah-two.vercel.app/",
+      url: "https://kiswahtradingandlogistics.com/",
     },
   ],
   creator: "Kiswah Trading and Logistics",
@@ -61,15 +57,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  applicationName: "Kiswah Trading and Logistics",
   referrer: "origin-when-cross-origin",
   // themeColor: "#ffffff",
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://kiswahtradingandlogistics.com/",
+    siteName: "Kiswah Trading and Logistics",
     title: "Kiswah Trading and Logistics",
     description:
       "Kiswah Trading and Logistics is a leading Ethiopian trading company, providing import-export and general trade services with excellence and integrity.",
-    url: "https://kiswah-two.vercel.app/",
-    siteName: "Kiswah Trading and Logistics",
     images: [
       {
         url: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
@@ -78,8 +75,6 @@ export const metadata: Metadata = {
         alt: "Kiswah Trading and Logistics",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -89,54 +84,25 @@ export const metadata: Metadata = {
     images: [
       "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
     ],
-    // creator: "@...",
   },
   icons: {
     icon: [
-      {
-        url: "../../public/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-      {
-        url: "../../public/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/../../publicapple-touch-icon.png",
-    shortcut: "../../public/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
-  manifest: "../../public/site.webmanifest",
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="../../public/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="../../public/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="../../public/favicon-16x16.png"
-        />
-        <link rel="manifest" href="../../public/site.webmanifest" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-screen font-[var(--font-geist-sans)] bg-[var(--color-bg)] text-[var(--color-text)] transition-colors`}
       >

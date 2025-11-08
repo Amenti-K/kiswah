@@ -1,12 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { servicesData } from "@/lib/data";
 import { getIcon } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const ServicesPreview = () => {
-  // Select top 2 most representative trading services
-  const homeServiceData = servicesData.slice(0, 2);
+  // Select top 3 most representative trading services
+  const homeServiceData = servicesData.slice(0, 3);
 
   const handleServiceClick = (service: (typeof servicesData)[0]) => {
     // Optional: navigate or log service click here
@@ -33,24 +32,26 @@ export const ServicesPreview = () => {
           return (
             <Card
               key={service.id}
-              className="hover-lift animate-fade-in-up border-border cursor-pointer group bg-card/70 backdrop-blur-sm"
-              style={{ animationDelay: `${index * 120}ms` }}
-              onClick={() => handleServiceClick(service)}
+              className="hover-lift animate-fade-in-up border-border group p-0"
+              style={{ animationDelay: `${index * 100}ms` }}
+              // onClick={() => handleServiceClick(service)}
             >
-              <CardContent className="p-8 space-y-4">
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[hsl(var(--golden))] to-[hsl(var(--golden-dark))] flex items-center justify-center shadow-md">
+              <CardContent className="p-4 space-y-2">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(var(--golden))] to-[hsl(var(--golden-dark))] flex items-center justify-center">
                   <Icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-foreground">
+                  {service.title}
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {service.shortDescription}
                 </p>
-                <div className="pt-4">
-                  <div className="flex items-center gap-2 text-[hsl(var(--golden))] font-semibold group-hover:gap-3 transition-all">
-                    <span>Learn More</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                </div>
+                {/* <div className="pt-4">
+                      <div className="flex items-center gap-2 text-[hsl(var(--golden))] font-semibold group-hover:gap-3 transition-all">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-5 h-5" />
+                      </div>
+                    </div> */}
               </CardContent>
             </Card>
           );

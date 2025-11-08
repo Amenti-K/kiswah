@@ -57,7 +57,7 @@ const companyInfoDefault = {
     employeeCount: 10,
     contactEmail: "kiswah@kiswahtradingandlogistics.com",
     contactPhone: "+251910887380",
-    address: ":Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
+    address: "Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
     socialLinks: {
         facebook: "https://www.facebook.com/kiswah.trading",
         telegram: "https://t.me/KiswahTrading",
@@ -289,7 +289,7 @@ function Footer() {
     const { data } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$hooks$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAppSelector"])((state)=>state.companyInfo);
     const companyInfo = data ?? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["companyInfoDefault"];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "bg-background text-muted-foreground py-10 mt-12 border-t border-border",
+        className: "bg-background text-muted-foreground p-4 md:p-10 border-t border-border",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8",

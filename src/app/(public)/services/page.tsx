@@ -1,23 +1,49 @@
-"use client";
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { getIcon } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import { servicesData } from "@/lib/data";
-import ServiceModal from "@/components/sections/service/SeriviceModal";
 import { PageHeader } from "@/components/sections/PageHeader";
+import type { Metadata } from "next";
 
-// export const metadata = {
-//   title: "Services",
-//   description:
-//     "Explore the services we provide — from design to development and deployment.",
-// };
+export const metadata: Metadata = {
+  title: "Our Services | Kiswah Trading",
+  description:
+    "Explore Kiswah Trading’s full range of import, export, and logistics services — designed to help your business move faster and grow globally.",
+  keywords: [
+    "Trading Services",
+    "Logistics Services",
+    "Import Services Ethiopia",
+    "Export Solutions",
+    "Freight Forwarding Ethiopia",
+    "Customs Clearing",
+  ],
+  openGraph: {
+    title: "Trading & Logistics Services — Kiswah Trading",
+    description:
+      "We provide professional import, export, and logistics services for businesses across Ethiopia and China.",
+    url: "https://kiswahtradingandlogistics.com/services",
+    images: [
+      {
+        url: "/og-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kiswah services showcase",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services — Kiswah Trading",
+    description:
+      "Kiswah offers trading and logistics services designed to simplify import, export, and freight operations for Ethiopian businesses.",
+    images: ["/og-services.jpg"],
+  },
+};
 
 export default function ServicesPage() {
-  const [selectedService, setSelectedService] = useState<
-    (typeof servicesData)[0] | null
-  >(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [selectedService, setSelectedService] = useState<
+  //   (typeof servicesData)[0] | null
+  // >(null);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   const process = [
     {
@@ -63,10 +89,10 @@ export default function ServicesPage() {
         "Our work does not end after delivery. We stay engaged to improve your sourcing cycle, negotiate better supplier terms, and plan your future import requirements.",
     },
   ];
-  const handleServiceClick = (service: (typeof servicesData)[0]) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
-  };
+  // const handleServiceClick = (service: (typeof servicesData)[0]) => {
+  //   setSelectedService(service);
+  //   setIsModalOpen(true);
+  // };
 
   return (
     <div>
@@ -91,7 +117,7 @@ export default function ServicesPage() {
                   key={service.id}
                   className="hover-lift animate-fade-in-up border-border group p-0"
                   style={{ animationDelay: `${index * 100}ms` }}
-                  onClick={() => handleServiceClick(service)}
+                  // onClick={() => handleServiceClick(service)}
                 >
                   <CardContent className="p-4 space-y-2">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(var(--golden))] to-[hsl(var(--golden-dark))] flex items-center justify-center">
@@ -149,11 +175,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ServiceModal
+      {/* <ServiceModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         service={selectedService}
-      />
+      /> */}
     </div>
   );
 }

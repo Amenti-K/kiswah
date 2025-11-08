@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useAppSelector } from "@/store/hooks";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const { data: companyInfo } = useAppSelector((state) => state.companyInfo);
@@ -36,7 +35,7 @@ const Header = () => {
             />
           )} */}
           <Image
-            src={logo}
+            src="https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"
             alt="Kiswah Trading and logistics"
             width={32}
             height={32}

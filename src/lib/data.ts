@@ -1,4 +1,3 @@
-import logo from "@/assets/logo.jpg";
 export const companyInfoDefault = {
   name: "Kiswah Trading and Logistics PLC",
   tagline: "Building the Future with Innovation",
@@ -33,14 +32,14 @@ export const companyInfoDefault = {
   contactEmail: "kiswah@kiswahtradingandlogistics.com",
   contactPhone: "+251910887380",
   address:
-    ":Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
+    "Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
 
   socialLinks: {
     facebook: "https://www.facebook.com/kiswah.trading",
     telegram: "https://t.me/KiswahTrading",
     tiktok: "https://t.me/KiswahTrading",
   },
-  logo: logo,
+  logo: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
 };
 
 export const servicesData = [

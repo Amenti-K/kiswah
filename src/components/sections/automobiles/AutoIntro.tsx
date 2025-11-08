@@ -12,7 +12,7 @@ export default function AutoIntro() {
           Our automobile division specializes in sourcing, importing, and
           delivering quality vehicles and heavy machinery from trusted Chinese
           manufacturers to Ethiopian businesses and individuals. We handle every
-          step — from purchase coordination to shipping and customs clearance.
+          step, from purchase coordination to shipping and customs clearance.
         </p>
         <Link
           href="/contact"

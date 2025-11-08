@@ -1,85 +1,65 @@
-"use client";
-import { motion } from "motion/react";
-import Image from "next/image";
+import { VehicleCard } from "@/components/sections/automobiles/VehicleCard";
 
 const vehicles = [
   {
-    name: "BYD Tang L",
-    image:
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762504337/tang_cizd39.jpg",
-    description: `The Tang L is a premium 7-seat mid-to-large SUV that blends high performance with advanced electric technologies. 
-    With a length of about 5,040 mm, it offers luxury interiors, a digital cockpit, and plenty of power — perfect for families or executives in Ethiopia.`,
+    name: "Dump Trucks",
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/DumbTruck1_zpmhll.jpg",
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592636/DumbTruck2_ttjebq.jpg",
+    ],
+    description: `high-quality dump trucks suitable for construction, mining, and road projects across Ethiopia. Our trucks are sourced from trusted manufacturers such as HOWO, Sinotruk, Shacman, FAW, and Dongfeng, ensuring power, reliability, and long operational life.`,
   },
   {
-    name: "BYD Yuan Up",
-    image:
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762504336/yuan_x13bz8.jpg",
-    description: `A compact electric SUV ideal for city use and smaller import budgets. It provides up to 401 km of range, smart infotainment, and efficient EV performance — perfect for modern, eco-conscious drivers.`,
+    name: "Excavators",
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592639/excavotors1_jgf9kj.jpg",
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592640/excavotors2_vcblko.jpg",
+    ],
+    description: `Our imported excavators combine power, precision, and efficiency for all kinds of construction, mining, and infrastructure projects. We import both new and used models from leading brands like Caterpillar, SANY, XCMG, Komatsu, and LiuGong.`,
   },
   {
-    name: "Toyota bZ3X (2025)",
-    image:
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762504336/bz3x_xtan8f.jpg",
-    description: `The 2025 bZ3X is Toyota’s new 5-door, 5-seat electric SUV with a 430–620 km range, offering global reliability and cutting-edge design — a premium yet practical EV for Ethiopian roads.`,
+    name: "Loaders",
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592645/loaders1_fqnhjl.jpg",
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592647/loaders2_flu5ip.jpg",
+    ],
+    description: `We supply wheel loaders and backhoe loaders designed for heavy lifting, loading, and material transport on job sites. Kiswah’s network ensures dependable machines with strong after-sales support and spare part availability.`,
   },
   {
-    name: "GAC Trumpchi S7 (2025)",
-    image:
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762504336/yuan_x13bz8.jpg",
-    description: `A sporty and versatile SUV featuring hybrid and PHEV options, advanced driver-assist, and LiDAR technology — combining power, comfort, and innovation at great value.`,
+    name: "Concrete Mixers",
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592632/concreteMixers2_oggqhf.jpg",
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592632/concreteMixers1_inh1xb.jpg",
+    ],
+    description: `We import concrete mixer trucks and stationary mixers tailored for Ethiopia’s construction and real estate development sectors. Our mixers are designed for high durability and efficient concrete transport.`,
+  },
+  {
+    name: "Dozers (Bulldozers)",
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/dozers1_w8awhx.jpg",
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/dozers2_beyjyo.jpg",
+    ],
+    description: `Kiswah imports crawler and wheeled bulldozers ideal for heavy earthmoving, land clearing, and construction foundation work. Our range includes powerful models from Shantui, HBXG, Komatsu, and Caterpillar.`,
   },
 ];
 
 export default function ElectricVehiclesPage() {
   return (
     <main className="container mx-auto px-6 py-16">
-      {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-12"
-      >
+      <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 text-foreground">
-          Electric Vehicles
+          Heavy Duty & Construction Equipment
         </h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Explore our collection of modern electric vehicles imported from
-          trusted global manufacturers combining performance, innovation, and
-          sustainability for Ethiopia’s growing EV market.
+          In addition to passenger vehicles, we also source and import
+          heavy-duty vehicles and construction equipment — including dump
+          trucks, excavators, and dozers.
         </p>
-      </motion.section>
+      </section>
 
-      {/* Vehicle Cards */}
       <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {vehicles.map((vehicle, index) => (
-          <motion.div
-            key={vehicle.name}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 border border-border group"
-          >
-            {/* Image */}
-            <div className="relative w-full h-72">
-              <Image
-                src={vehicle.image}
-                alt={vehicle.name}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            </div>
-
-            {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-              <h3 className="text-2xl font-semibold mb-2">{vehicle.name}</h3>
-              <p className="text-sm text-gray-200 leading-relaxed">
-                {vehicle.description}
-              </p>
-            </div>
-          </motion.div>
+          <VehicleCard key={index} vehicle={vehicle} index={index} />
         ))}
       </section>
     </main>

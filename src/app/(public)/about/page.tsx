@@ -1,10 +1,43 @@
-"use client";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { AboutCompanySection } from "@/components/sections/aboutUs/AboutCompanySection";
 import { VisionMissionSection } from "@/components/sections/aboutUs/VisionMissionSection";
-import { AchievementsSection } from "@/components/sections/aboutUs/AchievementsSection";
 import Leadership from "@/components/sections/aboutUs/Leadership";
 import { PhilosophyCultureSection } from "@/components/sections/aboutUs/PhilosophyCultureSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Kiswah Trading",
+  description:
+    "Learn about Kiswah Trading’s mission, vision, and commitment to building strong trade relationships between Ethiopia and global partners.",
+  keywords: [
+    "About Kiswah Trading",
+    "Ethiopian Trading Company",
+    "Logistics Experts Ethiopia",
+    "Import Export Professionals",
+    "Global Trade Ethiopia",
+  ],
+  openGraph: {
+    title: "About Kiswah Trading and Logistics",
+    description:
+      "Discover the story, mission, and team behind Kiswah Trading — Ethiopia’s trusted import-export and logistics partner.",
+    url: "https://kiswahtradingandlogistics.com/about",
+    images: [
+      {
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Kiswah Trading team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Kiswah Trading and Logistics",
+    description:
+      "Meet Kiswah Trading — connecting Ethiopia and global markets through trusted trade and logistics.",
+    images: ["/og-about.jpg"],
+  },
+};
 
 const sections = [
   AboutCompanySection,

@@ -16,7 +16,7 @@ export function Footer() {
   const companyInfo = data ?? companyInfoDefault;
 
   return (
-    <footer className="bg-background text-muted-foreground py-10 mt-12 border-t border-border">
+    <footer className="bg-background text-muted-foreground p-4 md:p-10 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div>

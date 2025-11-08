@@ -35,6 +35,16 @@ export const ContactPreview = () => {
 
   const mutation = useMutation({
     mutationFn: sendMessage,
+    onSuccess: () => {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: "",
+      });
+    },
   });
 
   const handleChange = (
@@ -45,7 +55,6 @@ export const ContactPreview = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple validation: required fields
     if (!formData.firstName || !formData.email || !formData.message) {
       alert("Please fill in all required fields.");
       return;
@@ -187,7 +196,7 @@ export const ContactPreview = () => {
                 {mutation.isError && (
                   <div className="flex items-center space-x-2 text-red-500 mt-2">
                     <XCircle className="h-5 w-5" />
-                    <p>Failed to send message. Please try again.</p>
+                    <p>{(mutation.error as Error)?.message}</p>
                   </div>
                 )}
               </form>
