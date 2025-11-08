@@ -14,10 +14,10 @@ export const sendMessage = async (formData: ContactMessage) => {
 
   try {
     const res = await emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, // e.g. "service_xxxxx"
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // e.g. "template_xxxxx"
+      "service_hxep2ir",
+      "template_u4gqjv9",
       templateParams,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! // e.g. "xxxxxxxxxxxxx"
+      "ZAU7Ac84wR33G8EtB"
     );
 
     // success check
