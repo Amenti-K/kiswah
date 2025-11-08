@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://kiswahtradingandlogistics.com/automobile",
     images: [
       {
-        url: "/og-auto.jpg",
+        url: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
         width: 1200,
         height: 630,
         alt: "Automobile imports Kiswah Trading",
@@ -34,7 +34,9 @@ export const metadata: Metadata = {
     title: "Automobile Import — Kiswah Trading",
     description:
       "Import quality vehicles from China to Ethiopia with Kiswah Trading’s reliable sourcing and delivery solutions.",
-    images: ["/og-auto.jpg"],
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
+    ],
   },
 };
 

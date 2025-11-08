@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://kiswahtradingandlogistics.com/",
     images: [
       {
-        url: "/og-home.jpg",
+        url: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
         width: 1200,
         height: 630,
         alt: "Kiswah Trading homepage banner",
@@ -33,7 +33,9 @@ export const metadata: Metadata = {
     title: "Kiswah Trading — Reliable Trade Partner",
     description:
       "Kiswah Trading connects Ethiopia with the world through trusted trading and logistics services.",
-    images: ["/og-home.jpg"],
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
+    ],
   },
 };
 

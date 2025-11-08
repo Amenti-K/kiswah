@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://kiswahtradingandlogistics.com/services",
     images: [
       {
-        url: "/og-services.jpg",
+        url: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
         width: 1200,
         height: 630,
         alt: "Kiswah services showcase",
@@ -35,7 +35,9 @@ export const metadata: Metadata = {
     title: "Our Services — Kiswah Trading",
     description:
       "Kiswah offers trading and logistics services designed to simplify import, export, and freight operations for Ethiopian businesses.",
-    images: ["/og-services.jpg"],
+    images: [
+      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
+    ],
   },
 };
 
