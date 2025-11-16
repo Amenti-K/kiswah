@@ -38,7 +38,7 @@ export const aboutData = {
         name: "Adnan Mujib",
         role: "CEO & Co-Founder",
         image:
-          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592627/adnan_qmb7r3.jpg",
+          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1763206158/adnan_nnd94f.jpg",
       },
       {
         name: "Mohammed Hussein",

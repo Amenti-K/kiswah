@@ -23,7 +23,7 @@ export const AboutPreview = () => (
           using reliable and scalable processes.
         </p>
 
-        <ul className="space-y-2 mb-6 text-sm md:text-base text-foreground/90">
+        <ul className="space-y-2 mb-6 text-sm md:text-base text-foreground/70">
           <li>• End-to-end freight & customs management</li>
           <li>• International procurement & vendor coordination</li>
           <li>• Customs compliance, documentation & tracking</li>
@@ -38,7 +38,7 @@ export const AboutPreview = () => (
           </Link>
           <Link
             href="/contact"
-            className="text-sm text-foreground/80 hover:underline"
+            className="text-sm text-foreground/80 hover:text-primary"
           >
             Contact Sales →
           </Link>

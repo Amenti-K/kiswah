@@ -46,7 +46,7 @@ export const AboutCompanySection = () => (
       </div>
     </div>
     <div className="flex justify-start w-full md:w-1/2 items-end">
-      <div className="relative h-[500px] w-full md:w-[450px] overflow-hidden shadow-lg">
+      <div className="relative h-[500px] w-full md:w-[450px] rounded-lg overflow-hidden shadow-lg">
         <Image
           src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
           alt="Kiswah Trading operations"

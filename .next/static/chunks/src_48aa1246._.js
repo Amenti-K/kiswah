@@ -329,7 +329,7 @@ const aboutData = {
             {
                 name: "Adnan Mujib",
                 role: "CEO & Co-Founder",
-                image: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592627/adnan_qmb7r3.jpg"
+                image: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1763206158/adnan_nnd94f.jpg"
             },
             {
                 name: "Mohammed Hussein",
@@ -611,7 +611,7 @@ const PhilosophyCultureSection = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__mo
                             src: "https://images.unsplash.com/photo-1670874457182-862dfede5362?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1094",
                             alt: "Security Shield",
                             fill: true,
-                            className: "object-cover drop-shadow-lg"
+                            className: "object-cover drop-shadow-lg rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/aboutUs/PhilosophyCultureSection.tsx",
                             lineNumber: 18,
@@ -769,7 +769,7 @@ const PhilosophyCultureSection = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__mo
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "pt-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/KiswahTradingCompanyProfile.pdf",
+                                href: "/CompanyProfileKiswah.pdf",
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 className: "inline-flex items-center px-4 py-2 rounded-md bg-primary text-primary-foreground hover:opacity-95 transition",
