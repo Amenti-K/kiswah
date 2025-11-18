@@ -33,7 +33,7 @@ const companyInfoDefault = {
         }
     ],
     employeeCount: 10,
-    contactEmail: "kiswah@kiswahtradingandlogistics.com",
+    contactEmail: "kiswah@kiswahgroups.com",
     contactPhone: "+251910887380",
     address: "Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
     socialLinks: {

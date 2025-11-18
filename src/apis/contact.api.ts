@@ -14,7 +14,7 @@ export const sendMessage = async (formData: ContactMessage) => {
 
   try {
     const res = await emailjs.send(
-      "service_hxep2ir",
+      "service_y0z9cnf",
       "template_u4gqjv9",
       templateParams,
       "ZAU7Ac84wR33G8EtB"
