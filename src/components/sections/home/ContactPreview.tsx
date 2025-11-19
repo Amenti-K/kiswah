@@ -6,8 +6,8 @@ import { companyInfoDefault } from "@/lib/data";
 import { ContactCard } from "../contact/ContactCard";
 
 export const ContactPreview = () => {
-  const { data, status } = useAppSelector((state) => state.companyInfo);
-  const companyInfo = status === "failed" ? companyInfoDefault : data;
+  // const { data, status } = useAppSelector((state) => state.companyInfo);
+  // const companyInfo = status === "failed" ? companyInfoDefault : data;
 
   return (
     <section id="contact" className="container mx-auto px-4 py-16">
@@ -25,7 +25,9 @@ export const ContactPreview = () => {
               <MapPin className="w-6 h-6 text-primary mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Address</h3>
-                <p className="text-muted-foreground">{companyInfo?.address}</p>
+                <p className="text-muted-foreground">
+                  {companyInfoDefault?.address}
+                </p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -33,7 +35,7 @@ export const ContactPreview = () => {
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
                 <p className="text-muted-foreground">
-                  {companyInfo?.contactPhone}
+                  {companyInfoDefault?.contactPhone}
                 </p>
               </div>
             </div>
@@ -42,7 +44,7 @@ export const ContactPreview = () => {
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
                 <p className="text-muted-foreground">
-                  {companyInfo?.contactEmail}
+                  {companyInfoDefault?.contactEmail}
                 </p>
               </div>
             </div>
@@ -50,7 +52,7 @@ export const ContactPreview = () => {
         </div>
 
         {/* Contact Form */}
-        <ContactCard companyEmail={companyInfo?.contactEmail} />
+        <ContactCard companyEmail={companyInfoDefault?.contactEmail} />
       </div>
     </section>
   );

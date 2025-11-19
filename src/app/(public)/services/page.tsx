@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { getIcon } from "@/lib/utils";
 import { servicesData } from "@/lib/data";
 import { PageHeader } from "@/components/sections/PageHeader";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Services | Kiswah Trading",

@@ -1,4 +1,3 @@
-"use client";
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
@@ -16,23 +15,22 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const initial = "light";
-    setTheme(initial);
     document.documentElement.classList.remove("dark");
     document.documentElement.classList.add("light");
-    document.documentElement.setAttribute("data-theme", initial);
+    document.documentElement.setAttribute("data-theme", "light");
+
+    setTheme("light");
   }, []);
 
   const toggleTheme = () => {
     setTheme((prev) => {
       const next = prev === "light" ? "dark" : "light";
-
       if (next === "dark") {
-        document.documentElement.classList.add("dark");
         document.documentElement.classList.remove("light");
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.add("light");
         document.documentElement.classList.remove("dark");
+        document.documentElement.classList.add("light");
       }
       document.documentElement.setAttribute("data-theme", next);
 

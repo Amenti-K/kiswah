@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "Home | Kiswah Trading",
+  title: "Home",
   description:
     "Your trusted partner in trading and logistics between Ethiopia and China. Kiswah Trading offers import, export, and freight solutions with reliability and excellence.",
   keywords: [

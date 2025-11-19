@@ -6,15 +6,15 @@ import { useEffect } from "react";
 import { fetchCompanyInfo } from "@/store/slices/companyInfoSlice";
 import { useAppDispatch } from "@/store/hooks";
 
-function CompanyInfoInitializer() {
-  const dispatch = useAppDispatch();
+// function CompanyInfoInitializer() {
+//   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCompanyInfo());
-  }, [dispatch]);
+//   useEffect(() => {
+//     dispatch(fetchCompanyInfo());
+//   }, [dispatch]);
 
-  return null; // invisible, just triggers fetch
-}
+//   return null; // invisible, just triggers fetch
+// }
 
 export default function CompanyInfoProviders({
   children,
@@ -23,7 +23,7 @@ export default function CompanyInfoProviders({
 }) {
   return (
     <Provider store={store}>
-      <CompanyInfoInitializer />
+      {/* <CompanyInfoInitializer /> */}
       {children}
     </Provider>
   );
