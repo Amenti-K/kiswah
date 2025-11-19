@@ -66,9 +66,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full h-20 backdrop-blur border-b border-border shadow-sm">
-      <nav className="container mx-auto px-4 md:px-6 h-full flex items-center justify-between">
+      <nav className="mx-auto px-2 sm:px-4 md:px-10 lg:px-16 gap-x-4 h-full flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
             src="https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"
             alt="Kiswah Trading and logistics"
@@ -82,7 +82,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center space-x-6">
+        <ul className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 whitespace-nowrap">
           {/* BEFORE TOOLS */}
           {mainNavBeforeTools.map((item) => {
             const isActive = pathname === item.href;
