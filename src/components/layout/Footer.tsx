@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Pin } from "lucide-react";
 import { companyInfoDefault } from "@/lib/data";
 import SocialLinksList from "@/components/SocialLInks";
 import Link from "next/link";
@@ -31,9 +31,17 @@ export function Footer() {
                 <span>{companyInfoDefault.contactPhone}</span>
               </li>
             )}
-            {companyInfoDefault?.address && (
+            {companyInfoDefault?.address.length > 0 && (
               <li className="flex items-center gap-2">
-                <MapPin size={30} /> <span>{companyInfoDefault.address}</span>
+                <div className="text-muted-foreground">
+                  {companyInfoDefault?.address.map((address, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <MapPin size={25} />
+                      {/* <Pin className="w-6 h-6 text-primary mt-1" /> */}
+                      <p>{address}</p>
+                    </div>
+                  ))}
+                </div>
               </li>
             )}
           </ul>

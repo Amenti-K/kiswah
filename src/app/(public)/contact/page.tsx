@@ -65,14 +65,14 @@ const Contact = () => {
                 <MapPin className="w-12 h-12 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-muted-foreground">
+                  <div className="text-muted-foreground">
                     {companyInfoDefault?.address.map((address, index) => (
                       <div key={index} className="flex items-start space-x-2">
                         <Pin className="w-6 h-6 text-primary mt-1" />
                         <p>{address}</p>
                       </div>
                     ))}
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
