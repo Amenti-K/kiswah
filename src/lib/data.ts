@@ -31,8 +31,10 @@ export const companyInfoDefault = {
   employeeCount: 10,
   contactEmail: "kiswah@kiswahgroups.com",
   contactPhone: "+251910887380",
-  address:
+  address: [
     "Royal plaza 5th floor, 507, Goma Kuteba, Mexico, Addis Ababa, Ethiopia",
+    "4th Floor, Building 8, No. 1738, Chouzhou North Road, Futian Street, Yiwu City, China",
+  ],
 
   socialLinks: {
     facebook: "https://www.facebook.com/kiswah.trading",

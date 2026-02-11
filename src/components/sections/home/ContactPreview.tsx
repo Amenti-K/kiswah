@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Pin } from "lucide-react";
 import { useAppSelector } from "@/store/hooks";
 import { companyInfoDefault } from "@/lib/data";
 import { ContactCard } from "../contact/ContactCard";
@@ -22,11 +22,16 @@ export const ContactPreview = () => {
           </p>
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
-              <MapPin className="w-6 h-6 text-primary mt-1" />
+              <MapPin className="w-12 h-12 text-primary mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Address</h3>
                 <p className="text-muted-foreground">
-                  {companyInfoDefault?.address}
+                  {companyInfoDefault?.address.map((address, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <Pin className="w-6 h-6 text-primary mt-1" />
+                      <p>{address}</p>
+                    </div>
+                  ))}
                 </p>
               </div>
             </div>

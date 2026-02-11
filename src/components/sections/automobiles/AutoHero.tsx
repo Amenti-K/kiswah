@@ -24,11 +24,10 @@ export default function AutoHero() {
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
           Invest in your future!
         </h1>
-        <p className="text-2xl">
-          Instead of letting your money sit in the bank, consider importing even
-          one car with us.
+        <p className="text-3xl mb-6">
+          Don’t let your money sit idle, import a car with us today!
         </p>
-        <p className="text-3xl mb-6"> Start your business journey today! </p>
+        {/* <p className="text-3xl mb-6"> Start your business journey today! </p> */}
         <Link
           href="#categories"
           className="inline-block bg-primary text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition"

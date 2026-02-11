@@ -56,7 +56,7 @@ export const aboutData = {
       },
       {
         name: "Selehadin Seid",
-        role: "Sourcing Manager",
+        role: "China Operations Head",
         image:
           "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592626/selhadin_cb6xtw.jpg",
       },

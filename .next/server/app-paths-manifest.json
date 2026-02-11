@@ -1,3 +1,6 @@
 {
+  "/(public)/about/page": "app/(public)/about/page.js",
+  "/(public)/automobiles/page": "app/(public)/automobiles/page.js",
+  "/(public)/contact/page": "app/(public)/contact/page.js",
   "/(public)/page": "app/(public)/page.js"
 }
