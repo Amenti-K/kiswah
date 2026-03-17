@@ -1,49 +1,44 @@
+import dumpTruck1 from "@/../public/assets/DumbTruck1.jpg";
+import dumpTruck2 from "@/../public/assets/DumbTruck2.jpg";
+import excavator1 from "@/../public/assets/excavotors1.jpg";
+import excavator2 from "@/../public/assets/excavotors2.jpg";
+import loader1 from "@/../public/assets/loaders1.jpg";
+import loader2 from "@/../public/assets/loaders2.jpg";
+import concreteMixer1 from "@/../public/assets/concreteMixers1.jpg";
+import concreteMixer2 from "@/../public/assets/concreteMixers2.jpg";
+import bulldozer1 from "@/../public/assets/dozers1.jpg";
+import bulldozer2 from "@/../public/assets/dozers2.jpg";
 import { VehicleCard } from "@/components/sections/automobiles/VehicleCard";
 
 const vehicles = [
   {
     name: "Dump Trucks",
-    images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/DumbTruck1_zpmhll.jpg",
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592636/DumbTruck2_ttjebq.jpg",
-    ],
+    images: [dumpTruck1, dumpTruck2],
     description: `high-quality dump trucks suitable for construction, mining, and road projects across Ethiopia. Our trucks are sourced from trusted manufacturers such as HOWO, Sinotruk, Shacman, FAW, and Dongfeng, ensuring power, reliability, and long operational life.`,
   },
   {
     name: "Excavators",
-    images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592639/excavotors1_jgf9kj.jpg",
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592640/excavotors2_vcblko.jpg",
-    ],
+    images: [excavator1, excavator2],
     description: `Our imported excavators combine power, precision, and efficiency for all kinds of construction, mining, and infrastructure projects. We import both new and used models from leading brands like Caterpillar, SANY, XCMG, Komatsu, and LiuGong.`,
   },
   {
     name: "Loaders",
-    images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592645/loaders1_fqnhjl.jpg",
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592647/loaders2_flu5ip.jpg",
-    ],
+    images: [loader1, loader2],
     description: `We supply wheel loaders and backhoe loaders designed for heavy lifting, loading, and material transport on job sites. Kiswah’s network ensures dependable machines with strong after-sales support and spare part availability.`,
   },
   {
     name: "Concrete Mixers",
-    images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592632/concreteMixers2_oggqhf.jpg",
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592632/concreteMixers1_inh1xb.jpg",
-    ],
+    images: [concreteMixer1, concreteMixer2],
     description: `We import concrete mixer trucks and stationary mixers tailored for Ethiopia’s construction and real estate development sectors. Our mixers are designed for high durability and efficient concrete transport.`,
   },
   {
     name: "Dozers (Bulldozers)",
-    images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/dozers1_w8awhx.jpg",
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592635/dozers2_beyjyo.jpg",
-    ],
+    images: [bulldozer1, bulldozer2],
     description: `Kiswah imports crawler and wheeled bulldozers ideal for heavy earthmoving, land clearing, and construction foundation work. Our range includes powerful models from Shantui, HBXG, Komatsu, and Caterpillar.`,
   },
 ];
 
-export default function ElectricVehiclesPage() {
+export default function HeavyDutyPage() {
   return (
     <main className="container mx-auto px-6 py-16">
       <section className="text-center mb-12">

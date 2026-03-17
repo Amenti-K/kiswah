@@ -2,6 +2,7 @@ import AutoCategory from "@/components/sections/automobiles/AutoCategory";
 import AutoHero from "@/components/sections/automobiles/AutoHero";
 import AutoIntro from "@/components/sections/automobiles/AutoIntro";
 import type { Metadata } from "next";
+import heavyCars from "@/../public/assets/heavycars.jpg";
 
 export const metadata: Metadata = {
   title: "Automobile Import | Kiswah Trading",
@@ -66,7 +67,7 @@ export default function AutomobilesPage() {
         title="Heavy Duty & Construction Equipment"
         description="In addition to passenger vehicles, we also source and import heavy-duty vehicles and construction equipment. Including dump trucks, excavators, and dozers."
         features={["Trucks", "Loaders", "Excavators", "Bulldozers"]}
-        image="https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592644/heavycars_johgfi.jpg"
+        image={heavyCars}
         link="/automobiles/heavy-duty"
         reversed={true}
       />

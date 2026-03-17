@@ -5,7 +5,7 @@ interface Props {
   title: string;
   description: string;
   features: string[];
-  image: string;
+  image: string | any;
   link: string;
   reversed?: boolean;
 }

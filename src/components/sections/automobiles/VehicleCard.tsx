@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export interface Vehicle {
   name: string;
-  images: string[];
+  images: any[];
   description: string;
 }
 
@@ -21,13 +21,13 @@ export const VehicleCard = ({ vehicle, index = 0 }: VehicleCardProps) => {
 
   const handlePrev = () => {
     setCurrentImage((prev) =>
-      prev === 0 ? vehicle.images.length - 1 : prev - 1
+      prev === 0 ? vehicle.images.length - 1 : prev - 1,
     );
   };
 
   const handleNext = () => {
     setCurrentImage((prev) =>
-      prev === vehicle.images.length - 1 ? 0 : prev + 1
+      prev === vehicle.images.length - 1 ? 0 : prev + 1,
     );
   };
 

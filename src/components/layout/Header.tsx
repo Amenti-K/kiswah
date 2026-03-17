@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { useAppSelector } from "@/store/hooks";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Url } from "next/dist/shared/lib/router/router";
+import logo from "@/../public/assets/logo.jpg";
 
 interface ITool {
   label: string;
@@ -70,7 +71,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
-            src="https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"
+            src={logo}
             alt="Kiswah Trading and logistics"
             width={32}
             height={32}
@@ -133,7 +134,7 @@ const Header = () => {
                         {tool.label}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
@@ -284,7 +285,7 @@ const Header = () => {
                         {tool.label}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             )}
