@@ -1,11 +1,12 @@
 {
-  "/(public)/about/page": "app/(public)/about/page.js",
-  "/(public)/automobiles/electric/page": "app/(public)/automobiles/electric/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/(public)/automobiles/heavy-duty/page": "app/(public)/automobiles/heavy-duty/page.js",
-  "/(public)/automobiles/page": "app/(public)/automobiles/page.js",
-  "/(public)/contact/page": "app/(public)/contact/page.js",
-  "/(public)/news/page": "app/(public)/news/page.js",
+  "/(public)/automobiles/electric/page": "app/(public)/automobiles/electric/page.js",
   "/(public)/page": "app/(public)/page.js",
-  "/(public)/services/page": "app/(public)/services/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/(public)/news/page": "app/(public)/news/page.js",
+  "/(public)/gallery/page": "app/(public)/gallery/page.js",
+  "/(public)/automobiles/page": "app/(public)/automobiles/page.js",
+  "/(public)/about/page": "app/(public)/about/page.js",
+  "/(public)/contact/page": "app/(public)/contact/page.js",
+  "/(public)/services/page": "app/(public)/services/page.js"
 }

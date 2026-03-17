@@ -185,7 +185,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"
+              src={logo}
               alt="Kiswah Trading and logistics"
               width={32}
               height={32}
