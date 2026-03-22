@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     title: "Kiswah Trading — Your Trusted Trade Partner",
     description:
       "Connecting Ethiopia with China through reliable trading and logistics services. Discover Kiswah’s import, export, and general trade solutions.",
-    url: "https://kiswahtradingandlogistics.com/",
+    url: "https://kiswahgroups.com/",
     images: [
       {
-        url: "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
+        url: "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774210699/kiswah/company/wevugjzek6ntasbq5b79.jpg",
         width: 1200,
         height: 630,
         alt: "Kiswah Trading homepage banner",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Kiswah Trading connects Ethiopia with the world through trusted trading and logistics services.",
     images: [
-      "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg",
+      "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774210699/kiswah/company/wevugjzek6ntasbq5b79.jpg",
     ],
   },
 };

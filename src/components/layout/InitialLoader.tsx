@@ -10,7 +10,11 @@ interface InitialLoaderProps {
   onComplete?: () => void;
 }
 
-const InitialLoader = ({ companyName, logoUrl, onComplete }: InitialLoaderProps) => {
+const InitialLoader = ({
+  companyName,
+  logoUrl,
+  onComplete,
+}: InitialLoaderProps) => {
   const [textIndex, setTextIndex] = useState(0);
   const loadingTexts = [
     "Connecting Ethiopia & China",
@@ -30,7 +34,11 @@ const InitialLoader = ({ companyName, logoUrl, onComplete }: InitialLoaderProps)
   return (
     <motion.div
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0, y: -20, transition: { duration: 0.8, ease: "easeInOut" } }}
+      exit={{
+        opacity: 0,
+        y: -20,
+        transition: { duration: 0.8, ease: "easeInOut" },
+      }}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background"
     >
       {/* Background Decorative Elements */}
@@ -48,7 +56,12 @@ const InitialLoader = ({ companyName, logoUrl, onComplete }: InitialLoaderProps)
             scale: [1, 1.5, 1],
             opacity: [0.2, 0.4, 0.2],
           }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear", delay: 2 }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 2,
+          }}
           className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/10 blur-[100px] rounded-full"
         />
       </div>
@@ -63,11 +76,14 @@ const InitialLoader = ({ companyName, logoUrl, onComplete }: InitialLoaderProps)
         >
           <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full animate-pulse" />
           <Image
-            src={logoUrl || "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"}
+            src={
+              logoUrl ||
+              "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774210699/kiswah/company/wevugjzek6ntasbq5b79.jpg"
+            }
             alt="Logo"
-            width={100}
-            height={100}
-            className="relative h-24 w-24 object-contain rounded-2xl border-2 border-primary/20 shadow-2xl shadow-primary/10"
+            width={150}
+            height={150}
+            className="relative object-contain rounded-2xl border-2 border-primary/20 shadow-2xl shadow-primary/10"
           />
         </motion.div>
 

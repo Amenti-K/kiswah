@@ -106,7 +106,7 @@ const Header = () => {
             <Image
               src={
                 companyInfo?.company.logoUrl ||
-                "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762148990/logo_hzckxp.jpg"
+                "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774210699/kiswah/company/wevugjzek6ntasbq5b79.jpg"
               }
               alt={companyInfo?.company.companyName || ""}
               width={32}
