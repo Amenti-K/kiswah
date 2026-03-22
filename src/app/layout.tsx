@@ -94,6 +94,8 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+import { Toaster } from "@/components/ui/toaster";
+
 export default function RootLayout({
   children,
 }: {
@@ -131,6 +133,7 @@ export default function RootLayout({
             </CompanyInfoProviders>
           </QueryProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

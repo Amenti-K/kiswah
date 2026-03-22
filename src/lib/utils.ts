@@ -16,6 +16,13 @@ export const iconForLabel = (label: string) => {
 };
 
 export const getIcon = (iconName: string) => {
-  const Icon = (LucideIcons as any)[iconName];
-  return Icon || LucideIcons.Package;
+  if (!iconName || typeof iconName !== "string") return LucideIcons.HelpCircle;
+  const Icon = (LucideIcons[iconName as keyof typeof LucideIcons] ||
+    LucideIcons.Briefcase) as any;
+
+  // Ensure it's a valid icon component (starts with uppercase)
+  if (/^[A-Z]/.test(iconName)) {
+    return Icon;
+  }
+  return LucideIcons.HelpCircle;
 };

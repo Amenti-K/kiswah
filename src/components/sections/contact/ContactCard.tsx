@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Loader2, CheckCircle2, XCircle } from "lucide-react";
+import { Loader2, CheckCircle2, XCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { sendMessage } from "@/apis/contact.api";
@@ -45,7 +45,7 @@ export const ContactCard: React.FC<ContactCardProps> = ({
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -62,7 +62,9 @@ export const ContactCard: React.FC<ContactCardProps> = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Send Us a Message</CardTitle>
+        <CardTitle className="flex items-center gap-2">
+          <Send className="w-5 h-5 text-primary" /> Send Us a Message
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {mutation.isSuccess ? (

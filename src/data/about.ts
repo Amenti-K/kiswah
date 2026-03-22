@@ -1,8 +1,3 @@
-import adnan from "../../public/assets/adnan.jpg";
-import mohammed from "../../public/assets/mohamod.jpg";
-import mahfuz from "../../public/assets/mahfuz.jpg";
-import selehadin from "../../public/assets/selhadin.jpg";
-
 export const aboutData = {
   hero: {
     title: "About Us",
@@ -42,24 +37,28 @@ export const aboutData = {
       {
         name: "Adnan Mujib",
         role: "CEO & Co-Founder",
-        image: adnan,
+        image:
+          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1763206158/adnan_nnd94f.jpg",
       },
       {
         name: "Mohammed Hussein",
         role: "Co-Founder",
-        image: mohammed,
+        image:
+          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592648/mohamod_j7h3bk.jpg",
       },
     ],
     chinaTeam: [
       {
         name: "Mahfuz Mujib",
         role: "China Operations Head",
-        image: mahfuz,
+        image:
+          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762596132/mahfuz_q0etik.jpg",
       },
       {
         name: "Selehadin Seid",
         role: "China Operations Head",
-        image: selehadin,
+        image:
+          "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762592626/selhadin_cb6xtw.jpg",
       },
     ],
   },

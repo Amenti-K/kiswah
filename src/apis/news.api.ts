@@ -1,14 +1,102 @@
-import { INews } from "@/lib/types/news";
+import { useFetch, useInfiniteFetch, useMutate } from "@/hooks/query.hook";
+import endpoints from "@/lib/endpoints";
+import { AxiosError } from "axios";
+import { useToast } from "@/hooks/use-toast";
 
-export const NEWS_LIST: Array<INews> = [];
-// export const NEWS_LIST = Array(15)
-//   .fill(null)
-//   .map((_, i) => ({
-//     id: i + 1,
-//     title: `Breaking News Headline ${i + 1}`,
-//     image:
-//       "https://res.cloudinary.com/dhgcbrxbw/image/upload/v1762504337/tang_cizd39.jpg",
-//     date: "September 3, 2025",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros at orci tempor gravida. Integer non neque nec eros malesuada aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros at orci tempor gravida. Integer non neque nec eros malesuada aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros at orci tempor gravida. Integer non neque nec eros malesuada aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros at orci tempor gravida. Integer non neque nec eros malesuada aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-//   }));
+// Fetch News with pagination
+export const useFetchNews = (params?: Record<string, any>) => {
+  // Add params to the queryKey so it refetches when they change
+  return useInfiniteFetch(endpoints.NEWS, {
+    queryKey: ["news", params],
+    params,
+  });
+};
+
+export const useCreateNews = () => {
+  const { toast } = useToast();
+
+  const onError = (error: AxiosError | any) => {
+    const message = error?.response?.data?.message;
+    toast({
+      title: "Error",
+      description: Array.isArray(message) ? message.join(", ") : message || "Creating news failed",
+      variant: "destructive",
+    });
+  };
+  const onSuccess = () => {
+    toast({
+      title: "Success",
+      description: "News created successfully",
+    });
+  };
+
+  return useMutate(endpoints.NEWS, "post", {
+    onSuccess,
+    onError,
+    queryKey: ["news"],
+  });
+};
+
+export const useUpdateNews = () => {
+  const { toast } = useToast();
+
+  const onError = (error: AxiosError | any) => {
+    const message = error?.response?.data?.message;
+    toast({
+      title: "Error",
+      description: Array.isArray(message) ? message.join(", ") : message || "Updating news failed",
+      variant: "destructive",
+    });
+  };
+  const onSuccess = () => {
+    toast({
+      title: "Success",
+      description: "News updated successfully",
+    });
+  };
+
+  return useMutate(
+    (payload: any) => {
+      const id = payload instanceof FormData ? payload.get("id") : payload.id;
+      return `${endpoints.NEWS}/${id}`;
+    },
+    "patch",
+    {
+      onSuccess,
+      onError,
+      queryKey: ["news"],
+    },
+  );
+};
+
+export const useDeleteNews = () => {
+  const { toast } = useToast();
+
+  const onError = (error: AxiosError | any) => {
+    const message = error?.response?.data?.message;
+    toast({
+      title: "Error",
+      description: Array.isArray(message) ? message.join(", ") : message || "Deleting news failed",
+      variant: "destructive",
+    });
+  };
+  const onSuccess = () => {
+    toast({
+      title: "Success",
+      description: "News deleted successfully",
+    });
+  };
+
+  return useMutate(
+    (payload: any) => {
+      const id = typeof payload === "string" ? payload : payload?.id;
+      return `${endpoints.NEWS}/${id}`;
+    },
+    "delete",
+    {
+      onSuccess,
+      onError,
+      queryKey: ["news"],
+    },
+  );
+};

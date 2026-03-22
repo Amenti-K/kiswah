@@ -1,9 +1,12 @@
 "use client";
-import { galleryImgs } from "@/apis/gallery.api";
+
+import { useFetchGallery } from "@/apis/gallery.api";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { motion } from "motion/react";
 
 export default function GalleryPage() {
+  const { data, isPending, error, refetch } = useFetchGallery();
+  const galleryImgs = data?.pages.flatMap((page) => page.galleryImgs) || [];
   return (
     <div className="pb-20">
       {/* Header */}
