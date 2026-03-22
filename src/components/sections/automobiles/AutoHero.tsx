@@ -7,7 +7,7 @@ export default function AutoHero() {
   return (
     <section className="relative h-[85vh] flex items-center justify-center text-center overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1761993600321-757e086491c0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1330"
+        src="https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212548/automobils_hero_qtlknl.avif"
         alt="Automobiles background"
         fill
         className="object-cover"

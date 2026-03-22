@@ -53,7 +53,9 @@ export const ContactPreview = () => {
                 Get in <span className="text-gradient-golden">Touch</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you have questions about our global sourcing, logistics network, or specific import/export needs, our team is here to provide expert guidance.
+                Whether you have questions about our global sourcing, logistics
+                network, or specific import/export needs, our team is here to
+                provide expert guidance.
               </p>
             </div>
 
@@ -67,7 +69,9 @@ export const ContactPreview = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="flex gap-6 group"
                 >
-                  <div className={`flex-shrink-0 w-14 h-14 rounded-2xl ${detail.color} flex items-center justify-center transition-transform group-hover:scale-110 duration-300 shadow-sm`}>
+                  <div
+                    className={`flex-shrink-0 w-14 h-14 rounded-2xl ${detail.color} flex items-center justify-center transition-transform group-hover:scale-110 duration-300 shadow-sm`}
+                  >
                     <detail.icon className="w-7 h-7" />
                   </div>
                   <div className="space-y-2">
@@ -76,9 +80,12 @@ export const ContactPreview = () => {
                     </h3>
                     <div className="space-y-1">
                       {detail.items.map((item, i) => (
-                        <p key={i} className="text-muted-foreground leading-snug">
-                          {item}
-                        </p>
+                        <div key={i} className="flex items-start gap-2">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                          <p className="text-muted-foreground leading-snug">
+                            {item}
+                          </p>
+                        </div>
                       ))}
                     </div>
                   </div>

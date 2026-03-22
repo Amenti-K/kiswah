@@ -45,8 +45,7 @@ export const AboutCompanySection = () => {
         <div className="relative h-[400px] md:h-[500px] w-full md:w-[450px] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
           <Image
             src={
-              // company?.logoUrl ||
-              "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=800"
+              "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212549/page_header_img_p0qg16.avif"
             }
             alt={company?.companyName || "Kiswah Trading operations"}
             fill

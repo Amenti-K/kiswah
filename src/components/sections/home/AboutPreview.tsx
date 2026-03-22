@@ -87,7 +87,7 @@ export const AboutPreview = () => (
       >
         <div className="relative w-full max-w-2xl h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
           <Image
-            src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1200"
+            src="https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212549/page_header_img_p0qg16.avif"
             alt="Kiswah Trading operations"
             fill
             sizes="(max-width: 768px) 100vw, 800px"

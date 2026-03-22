@@ -12,10 +12,11 @@ export default function AutoIntro() {
         transition={{ duration: 0.8 }}
       >
         <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/10 text-primary border border-primary/20">
-            About Our Division
+          About Our Division
         </span>
         <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground leading-tight">
-          Your Trusted Automobile <span className="text-gradient-golden">Import Partner</span>
+          Your Trusted Automobile{" "}
+          <span className="text-gradient-golden">Import Partner</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
           Our automobile division specializes in sourcing, importing, and
@@ -39,7 +40,7 @@ export default function AutoIntro() {
         className="relative w-full h-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl group"
       >
         <Image
-          src="https://images.unsplash.com/photo-1522674149721-b0191358dc5c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=686"
+          src="https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212548/automobiles_intro_d0ulpi.avif"
           alt="Imported vehicles"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"

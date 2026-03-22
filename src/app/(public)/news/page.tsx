@@ -30,10 +30,7 @@ export default function NewsPage() {
   return (
     <div>
       {/* Page Header */}
-      <PageHeader
-        title="News & Updates"
-        image="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=60&w=1200"
-      />
+      <PageHeader title="News & Updates" />
 
       <div className="max-w-3xl mx-auto px-4 mt-10 mb-20">
         <div className="flex flex-col space-y-12">

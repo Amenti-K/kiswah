@@ -9,21 +9,24 @@ const slides = [
   {
     id: 1,
     image:
-      "https://plus.unsplash.com/premium_photo-1661879449050-069f67e200bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500", // ship photo
+      "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212548/ship_hero_ejfqio.avif", // ship photo
+    // "https://plus.unsplash.com/premium_photo-1661879449050-069f67e200bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500", // ship photo
     position: "items-start text-left",
     subtitle: "Connecting Global Trade Efficiently.",
   },
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500", // container ship photo
+      "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212548/ship_container_r3jzeb.avif", // container ship photo
+    // "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500", // container ship photo
     position: "items-center text-center",
     subtitle: "Better Deals, Smarter Logistics.",
   },
   {
     id: 3,
     image:
-      "https://plus.unsplash.com/premium_photo-1661963312443-e6f80b64ace6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+      "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212549/page_header_img_p0qg16.avif",
+    // "https://plus.unsplash.com/premium_photo-1661963312443-e6f80b64ace6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
     position: "items-end text-right",
     subtitle: "Your Trusted Partner in Global Commerce.",
   },

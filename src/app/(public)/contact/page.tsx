@@ -28,10 +28,7 @@ const Contact = () => {
 
   return (
     <div>
-      <PageHeader
-        title="Contact Us"
-        image="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=60&w=1200"
-      />
+      <PageHeader title="Contact Us" />
 
       <div className="container mx-auto px-6 py-24 md:py-32">
         <motion.div

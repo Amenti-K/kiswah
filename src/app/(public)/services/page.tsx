@@ -38,10 +38,7 @@ export default function ServicesPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Our Services"
-        image="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naXN0aWNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
-      />
+      <PageHeader title="Our Services" />
 
       <section className="py-24 relative overflow-hidden">
         {/* Decorative elements */}

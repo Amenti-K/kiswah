@@ -5,14 +5,17 @@ export const PageHeader = ({
   image,
 }: {
   title: string;
-  image: string;
+  image?: string;
 }) => (
   <section
     className="relative h-[40vh] flex items-center justify-start text-center px-32 overflow-hidden"
     aria-label="Page header"
   >
     <Image
-      src={image}
+      src={
+        image ||
+        "https://res.cloudinary.com/dr3kjsjej/image/upload/v1774212549/page_header_img_p0qg16.avif"
+      }
       alt={`${title} cover`}
       fill
       className="object-cover absolute inset-0 -z-10"
