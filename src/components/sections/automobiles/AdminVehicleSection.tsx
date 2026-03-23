@@ -120,7 +120,7 @@ export default function AdminVehicleSection() {
               <Plus className="mr-2 h-4 w-4" /> Add Vehicle
             </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto glass-card border-primary/20">
+          <DialogContent className="min-w-[50%] max-h-[90vh] overflow-y-auto glass-card border-primary/20">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold">
                 {editingVehicle ? "Edit Vehicle" : "Add New Vehicle"}

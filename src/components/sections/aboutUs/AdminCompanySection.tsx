@@ -221,33 +221,33 @@ export default function AdminCompanySection() {
                           label="Corporate Mark / Logo"
                         />
                       </div>
-                      <div className="space-y-4">
+                      <div className="grid grid-cols-1 gap-6">
                         <TextAreaField
                           control={form.control}
-                          name="about"
-                          label="Corporate Biography"
-                          placeholder="Craft a compelling narrative about your company's history, values, and impact..."
-                          rows={11}
+                          name="mission"
+                          label="Mission Statement"
+                          placeholder="What is your purpose?"
+                          rows={4}
+                        />
+                        <TextAreaField
+                          control={form.control}
+                          name="vision"
+                          label="Vision Statement"
+                          placeholder="Where are you going?"
+                          rows={4}
                         />
                       </div>
                     </div>
 
                     <Separator className="bg-primary/5" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
                       <TextAreaField
                         control={form.control}
-                        name="mission"
-                        label="Mission Statement"
-                        placeholder="What is your purpose?"
-                        rows={4}
-                      />
-                      <TextAreaField
-                        control={form.control}
-                        name="vision"
-                        label="Vision Statement"
-                        placeholder="Where are you going?"
-                        rows={4}
+                        name="about"
+                        label="Corporate Biography"
+                        placeholder="Craft a compelling narrative about your company's history, values, and impact..."
+                        rows={6}
                       />
                     </div>
                   </CardContent>

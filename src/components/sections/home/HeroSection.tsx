@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "motion/react";
+import { useAppSelector } from "@/redux/hooks";
 
 const slides = [
   {
@@ -33,6 +34,8 @@ const slides = [
 ];
 
 export const HeroSection = () => {
+  const { data } = useAppSelector((state) => state.bootstrap);
+  const companyName = data?.company.companyName;
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -92,7 +95,7 @@ export const HeroSection = () => {
                 className="space-y-4"
               >
                 <span className="inline-block px-4 py-1 text-xs font-bold tracking-[0.2em] uppercase rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm">
-                  Kiswah Trading & Logistics
+                  {companyName}
                 </span>
                 <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-white drop-shadow-lg">
                   Your Trusted <br />

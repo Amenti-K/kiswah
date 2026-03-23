@@ -1,4 +1,14 @@
 {
   "/(public)/about/page": "app/(public)/about/page.js",
-  "/(public)/page": "app/(public)/page.js"
+  "/(public)/automobiles/[id]/[name]/page": "app/(public)/automobiles/[id]/[name]/page.js",
+  "/(public)/automobiles/page": "app/(public)/automobiles/page.js",
+  "/(public)/contact/page": "app/(public)/contact/page.js",
+  "/(public)/page": "app/(public)/page.js",
+  "/(public)/services/page": "app/(public)/services/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/(admin-root)/about/page": "app/admin/(admin-root)/about/page.js",
+  "/admin/(admin-root)/automobiles/page": "app/admin/(admin-root)/automobiles/page.js",
+  "/admin/(admin-root)/page": "app/admin/(admin-root)/page.js",
+  "/admin/(admin-root)/services/page": "app/admin/(admin-root)/services/page.js",
+  "/admin/(auth)/signin/page": "app/admin/(auth)/signin/page.js"
 }

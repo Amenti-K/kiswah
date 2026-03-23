@@ -47,7 +47,7 @@ export default function CategoryPage() {
   const decodedName = decodeURIComponent(name as string);
 
   return (
-    <main className="container mx-auto px-6 py-24 min-h-screen">
+    <main className="container mx-auto px-6 py-12 min-h-screen">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function CategoryPage() {
           Discover our premium selection of {decodedName} — built for
           performance, reliability, and style.
         </p>
-        
+
         {/* Background Decorative Element */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px]" />
       </motion.section>
@@ -88,13 +88,15 @@ export default function CategoryPage() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-32 bg-muted/20 rounded-[3rem] border-2 border-dashed border-muted/50 max-w-3xl mx-auto"
           >
-             <div className="w-20 h-20 rounded-full bg-muted/50 flex items-center justify-center mx-auto mb-6">
-                 <Loader2 className="w-10 h-10 text-muted-foreground/30" />
-             </div>
+            <div className="w-20 h-20 rounded-full bg-muted/50 flex items-center justify-center mx-auto mb-6">
+              <Loader2 className="w-10 h-10 text-muted-foreground/30" />
+            </div>
             <p className="text-muted-foreground text-xl font-bold">
               No vehicles found in this category yet.
             </p>
-            <p className="text-muted-foreground mt-2">Please check back soon for our latest arrivals.</p>
+            <p className="text-muted-foreground mt-2">
+              Please check back soon for our latest arrivals.
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

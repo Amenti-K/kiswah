@@ -3,13 +3,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { vehicleSchema, VehicleType } from "@/components/schema/vehicle.schema";
 import { Form } from "@/components/ui/form";
 import { useEffect } from "react";
-import { IVehicle, IVehicleCategory } from "@/components/interface/vehicle.interface";
+import {
+  IVehicle,
+  IVehicleCategory,
+} from "@/components/interface/vehicle.interface";
 import TextField from "./fields/TextField";
 import TextAreaField from "./fields/TextAreaField";
 import NumericField from "./fields/NumericField";
 import SubmitButton from "./fields/SubmitButton";
-import ImagePickerField from "./fields/ImagePickerField";
 import SelectField from "./fields/SelectField";
+import MultipleImagePicker from "./fields/MultipleImagePickerField";
 
 interface VehicleFormProps {
   categories: IVehicleCategory[];
@@ -47,7 +50,7 @@ export default function VehicleForm({
         description: defaultValues.description,
         order: defaultValues.order.toString(),
         categoryId: defaultValues.categoryId,
-        imageUrls: Array.isArray(defaultValues.imageUrls) 
+        imageUrls: Array.isArray(defaultValues.imageUrls)
           ? defaultValues.imageUrls[0] // Since ImagePicker handles one, just pick first for now
           : defaultValues.imageUrls,
       });
@@ -61,14 +64,12 @@ export default function VehicleForm({
         className="flex flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4"
       >
         <div className="flex-1">
-          <ImagePickerField
+          <MultipleImagePicker
             control={form.control}
             name="imageUrls"
             label="Vehicle Image"
+            maxFiles={5}
           />
-          <p className="text-xs text-muted-foreground mt-2">
-            Note: Current UI supports uploading one image. Backend supports multiple.
-          </p>
         </div>
         <div className="flex flex-col w-full md:w-[350px] space-y-4">
           <SelectField

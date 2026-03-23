@@ -11,7 +11,11 @@ export const ServicesPreview = () => {
   const trandingServices = data?.services?.slice(0, 3);
 
   return (
-    <section id="services" className="container mx-auto px-4 py-24 bg-muted/20">
+    <section
+      id="services"
+      // className="container mx-auto px-4 py-16 md:py-24 bg-muted/10"
+      className="flex-1 flex justify-center items-center flex-col mx-auto px-4 py-16 md:py-24 bg-muted"
+    >
       <div className="text-center mb-16 space-y-4">
         <span className="inline-block px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/10 text-primary border border-primary/20">
           Our Expertise
@@ -25,7 +29,8 @@ export const ServicesPreview = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 md:px-16 lg:px-32 gap-10">
+        {/* <div className="px-4 md:px-10 lg:px-20 w-full flex-1 flex justify-between items-center"> */}
         {trandingServices?.map((service, index) => {
           const Icon = getIcon(service?.iconName || "");
           return (

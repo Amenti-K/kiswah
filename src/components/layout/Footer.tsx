@@ -1,7 +1,6 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
-// import { companyInfoDefault } from "@/lib/data";
 import SocialLinksList from "@/components/SocialLInks";
 import Link from "next/link";
 import { useAppSelector } from "@/redux/hooks";
@@ -15,6 +14,7 @@ const links = [
 export function Footer() {
   const { data: bootstrapData } = useAppSelector((state) => state.bootstrap);
   const company = bootstrapData?.company;
+  console.log(company?.socialLinks);
 
   const socialLinksRecord = company?.socialLinks?.reduce(
     (acc, link) => {

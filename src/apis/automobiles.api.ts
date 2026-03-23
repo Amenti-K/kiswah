@@ -3,10 +3,12 @@ import endpoints from "@/lib/endpoints";
 import { AxiosError } from "axios";
 import { useToast } from "@/hooks/use-toast";
 import { IResponse } from "@/components/interface/common.interface";
-import { IVehicle, IVehicleCategory } from "@/components/interface/vehicle.interface";
+import {
+  IVehicle,
+  IVehicleCategory,
+} from "@/components/interface/vehicle.interface";
 
 // --- Category Hooks ---
-
 export const useFetchCategories = () => {
   return useFetch<IResponse<IVehicleCategory[]>>(endpoints.VEHICLE_CATEGORY, {
     queryKey: ["vehicle-categories"],
@@ -14,17 +16,23 @@ export const useFetchCategories = () => {
 };
 
 export const useFetchCategory = (id: string) => {
-  return useFetch<IResponse<IVehicleCategory>>(`${endpoints.VEHICLE_CATEGORY}/${id}`, {
-    queryKey: ["vehicle-category", id],
-    enabled: !!id,
-  });
+  return useFetch<IResponse<IVehicleCategory>>(
+    `${endpoints.VEHICLE_CATEGORY}/${id}`,
+    {
+      queryKey: ["vehicle-category", id],
+      enabled: !!id,
+    },
+  );
 };
 
 export const useFetchCategoryBySlug = (slug: string) => {
-  return useFetch<IResponse<IVehicleCategory>>(`${endpoints.VEHICLE_CATEGORY}/slug/${slug}`, {
-    queryKey: ["vehicle-category-slug", slug],
-    enabled: !!slug,
-  });
+  return useFetch<IResponse<IVehicleCategory>>(
+    `${endpoints.VEHICLE_CATEGORY}/slug/${slug}`,
+    {
+      queryKey: ["vehicle-category-slug", slug],
+      enabled: !!slug,
+    },
+  );
 };
 
 export const useCreateCategory = () => {
@@ -111,9 +119,10 @@ export const useDeleteCategory = () => {
 };
 
 // --- Vehicle Hooks ---
-
 export const useFetchVehicles = (categoryId?: string) => {
-  const url = categoryId ? `${endpoints.VEHICLE}?categoryId=${categoryId}` : endpoints.VEHICLE;
+  const url = categoryId
+    ? `${endpoints.VEHICLE}?categoryId=${categoryId}`
+    : endpoints.VEHICLE;
   return useFetch<IResponse<IVehicle[]>>(url, {
     queryKey: ["vehicles", categoryId],
   });
@@ -146,7 +155,7 @@ export const useCreateVehicle = () => {
   return useMutate(endpoints.VEHICLE, "post", {
     onSuccess,
     onError,
-    queryKey: ["vehicles"],
+    queryKey: ["vehicles", "vehicle-categories"],
   });
 };
 
@@ -198,13 +207,9 @@ export const useDeleteVehicle = () => {
     });
   };
 
-  return useMutate(
-    (id: string) => `${endpoints.VEHICLE}/${id}`,
-    "delete",
-    {
-      onSuccess,
-      onError,
-      queryKey: ["vehicles"],
-    },
-  );
+  return useMutate((id: string) => `${endpoints.VEHICLE}/${id}`, "delete", {
+    onSuccess,
+    onError,
+    queryKey: ["vehicles"],
+  });
 };
